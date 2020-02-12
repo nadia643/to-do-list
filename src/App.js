@@ -31,20 +31,35 @@ class App extends Component {
     });
   };
   clearList = () => {
-    console.log("clear list ");
+    this.setState({
+      items:[]
+    });
   };
   handleDelete = id => {
-    console.log(`handle delete ${id}`);
+    const filteredItems = this.state.items.filter
+    (item => item.id !== id);
+    this.setState({
+      items:filteredItems
+    });
   };
   handleEdit = id => {
-    console.log(`edit edit ${id}`);
-  };
+    const filteredItems = this.state.items.filter
+    (item => item.id !== id);
+    const selectedItem = this.state.items.find
+    (item => item.id === id)
+    this.setState({
+      items: filteredItems,
+      item: selectedItem.title,
+      id: id,
+      editItem: true
+    })
+    };
   render() {
     return (
       <div className="container">
         <div className="row">
           <div className="col-10 mx-auto col-md-8 mt-5">
-            <h3 className="text-capitalize text-center">todo input</h3>
+            <h3 className="text-capitalize text-center">Add items here</h3>
             <TodoInput
               item={this.state.item}
               handleChange={this.handleChange}
