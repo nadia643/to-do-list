@@ -1,0 +1,16 @@
+
+$mainGray: RGB(161, 161, 161);
+$mainPeach: RGB(238, 120, 120);
+
+body {
+    background-color: $mainGray;
+}
+
+#addItem {
+    background-color: $mainPeach;
+    border-color: $mainPeach;
+
+    &:hover {
+        background-color: darken($mainPeach 15%)
+    }
+}

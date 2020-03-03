@@ -22,6 +22,7 @@ export default class TodoInput extends Component {
           </div>
           <button
             type="submit"
+            id="addItem"
             disabled={item ? false : true}
             className={
                 editItem

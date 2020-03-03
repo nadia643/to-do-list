@@ -3,6 +3,9 @@ import uuid from "uuid";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
+import "./css/style.css";
+
+
 class App extends Component {
   state = {
     items: [],

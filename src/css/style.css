@@ -1,0 +1,7 @@
+body {
+  background-color: RGB(161, 161, 161); }
+
+#addItem {
+  background-color: RGB(238, 120, 120);
+  border-color: RGB(238, 120, 120); 
+}
